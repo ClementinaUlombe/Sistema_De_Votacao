@@ -1,0 +1,73 @@
+.apuracao-container {
+    padding: 20px;
+    max-width: 10000px !important;
+    margin: 0 auto;
+  }
+  
+  .info-apuracao {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .resultados-container {
+    margin: 20px 0;
+  }
+  
+  .resultado-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .resultado-item h3 {
+    margin: 0 0 10px 0;
+    color: #1f2937;
+  }
+  
+  .barra-progresso {
+    height: 24px;
+    background-color: #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 10px 0;
+  }
+  
+  .progresso {
+    height: 100%;
+    background-color: #2563eb;
+    transition: width 0.3s ease;
+  }
+  
+  .dados-votos {
+    display: flex;
+    justify-content: space-between;
+    color: #6b7280;
+  }
+  
+  .acoes-apuracao {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .acoes-apuracao button {
+    padding: 10px 20px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .acoes-apuracao button:hover {
+    background-color: #1d4ed8;
+  }

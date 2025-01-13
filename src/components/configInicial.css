@@ -1,0 +1,78 @@
+.full-screen-container { 
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffff; /* Cor de fundo */
+    padding: 20px;
+  }
+  
+  .logo-top-left {
+    width: 150px !important; /* Aumentado para 1000px e forçado com !important */
+    height: auto !important; /* Mantém a proporção da imagem */
+    margin-bottom: 50px; /* Espaço maior abaixo da logo */
+    z-index: 1;
+    margin-top: -50px; /* Move a logo um pouco para baixo */
+    
+  }
+  
+  .form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Largura máxima para manter o design responsivo */
+    margin-top: 50px; /* Move o formulário para baixo */
+  }
+  
+  .form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1e40af; /* Azul */
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .submit-button {
+    width: 100%; /* Garante que todos os elementos tenham a mesma largura */
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: #1e40af; /* Destaque ao focar */
+  }
+  
+  .submit-button {
+    background-color: #3b82f6; /* Azul */
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  
+  .submit-button:hover {
+    background-color: #2563eb; /* Azul mais escuro */
+  }
+  

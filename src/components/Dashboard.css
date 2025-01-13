@@ -1,0 +1,124 @@
+.dashboard-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .numero-destaque {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2563eb;
+    margin: 10px 0;
+  }
+  
+  .graficos-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  @media (min-width: 768px) {
+    .graficos-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .grafico {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .grafico-barras {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 200px;
+    padding: 20px 0;
+  }
+  
+  .barra-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .barra {
+    width: 40px;
+    background-color: #2563eb;
+    border-radius: 4px 4px 0 0;
+    margin: 0 5px;
+    position: relative;
+  }
+  
+  .valor {
+    position: absolute;
+    top: -25px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+  }
+  
+  .hora {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+  
+  .distribuicao-votos {
+    padding: 20px 0;
+  }
+  
+  .item-distribuicao {
+    margin-bottom: 15px;
+  }
+  
+  .barra-progresso {
+    height: 20px;
+    background-color: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 5px 0;
+  }
+  
+  .progresso {
+    height: 100%;
+    background-color: #2563eb;
+    transition: width 0.3s ease;
+  }
+  
+  .acoes-dashboard {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .acoes-dashboard button {
+    padding: 10px 20px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .acoes-dashboard button:hover {
+    background-color: #1d4ed8;
+  }

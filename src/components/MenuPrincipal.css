@@ -1,0 +1,89 @@
+.menu-principal {
+    background-color: #ffffff;
+    color: #0056b3;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.menu-principal h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.menu-principal img.logo-top-left {
+    width: 150px;
+    position: absolute;
+    top: 65px;
+    left: 20px;
+    z-index: 1;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    margin-top: 100px;
+}
+
+.menu-item {
+    margin: 15px;
+    display: inline-block;
+}
+
+.menu-item a {
+    display: flex; /* Usado para centralizar o texto verticalmente */
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    align-items: center; /* Centraliza o texto verticalmente */
+    width: 200px; /* Aumentado para caber o texto completo */
+    height: 180px;
+    background-color: #3b82f6;
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px; /* Adicionado para evitar que o texto encoste nas bordas */
+    transition: all 0.3s ease;
+}
+
+.menu-item a:hover {
+    background-color: #004494;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+}
+
+.menu-item a:active {
+    background-color: #00337a;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(0.95);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-principal h1 {
+        font-size: 24px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .menu-item {
+        margin: 10px 0;
+    }
+
+    .menu-principal img.logo-top-left {
+        width: 120px;
+    }
+
+    .menu-item a {
+        width: 200px; /* Reduzido para telas menores */
+        height: 150px;
+        font-size: 18px;
+    }
+}

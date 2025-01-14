@@ -1,23 +1,60 @@
+/* Adicionando o retângulo azul por cima da tela */
+.laterais-azuis {
+    position: fixed; /* Fixa o retângulo na tela */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa toda a largura da tela */
+    height: 100px; /* Define a altura do retângulo */
+    background-color: #0056b3; /* Cor azul */
+    z-index: 1; /* Coloca o retângulo por cima da imagem, mas abaixo do menu */
+}
+
+/* Imagem de fundo ocupando toda a tela */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.slideshow-image {
+    position: fixed; /* Mantém a imagem fixa mesmo com rolagem */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ocupa 100% da largura da tela */
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    object-fit: cover; /* Ajusta a imagem para cobrir toda a área sem distorção */
+    z-index: -1; /* Coloca a imagem atrás do retângulo */
+}
+
+/* Estilização do menu principal */
 .menu-principal {
-    background-color: #ffffff;
+    background-color: transparent; /* Deixa o fundo do menu transparente */
     color: #0056b3;
     text-align: center;
     padding: 20px;
     font-family: 'Arial', sans-serif;
+    position: relative; /* Garante que o menu fique acima da imagem */
+    z-index: 2;
 }
 
 .menu-principal h1 {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 40px;
+    color: #fff; /* Texto branco */
+    z-index: 3;
+    top: -150px; /* Ajuste para mover mais para cima */
+    position: relative; /* Garantir que o texto fique acima da imagem e do retângulo */
+    padding-left: 180px; /* Ajuste para garantir que o título não sobreponha a logo */
 }
+
 
 .menu-principal img.logo-top-left {
     width: 150px;
-    position: absolute;
-    top: 65px;
-    left: 20px;
-    z-index: 1;
+    position: fixed; /* Fixar a logo no topo esquerdo da tela */
+    top: 60px; /* Ajuste para cima */
+    left: 20px; /* Ajuste para a esquerda */
+    z-index: 3; /* Garante que o logo fique acima de outros elementos */
 }
 
 nav ul {
@@ -34,12 +71,12 @@ nav ul {
 }
 
 .menu-item a {
-    display: flex; /* Usado para centralizar o texto verticalmente */
-    justify-content: center; /* Centraliza o texto horizontalmente */
-    align-items: center; /* Centraliza o texto verticalmente */
-    width: 200px; /* Aumentado para caber o texto completo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
     height: 180px;
-    background-color: #3b82f6;
+    background-color: rgba(59, 130, 246, 0.9); /* Fundo com leve transparência */
     color: #ffffff;
     font-size: 26px;
     font-weight: 600;
@@ -47,12 +84,34 @@ nav ul {
     text-decoration: none;
     border-radius: 15px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 10px; /* Adicionado para evitar que o texto encoste nas bordas */
     transition: all 0.3s ease;
 }
-
+/* Estilo para o texto rolante */
+.news-ticker {
+    position: fixed;
+    top: 10px; /* Ajuste a posição do texto na parte superior */
+    right: -100%; /* Inicialmente o texto está fora da tela à direita */
+    white-space: nowrap; /* Garante que o texto não quebre em várias linhas */
+    font-size: 24px; /* Tamanho do texto */
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    z-index: 4;
+    animation: ticker 19s linear infinite; /* Animação de rolagem */
+  }
+  
+  /* Animação para mover o texto da direita para a esquerda */
+  @keyframes ticker {
+    0% {
+      right: -100%; /* Começa fora da tela à direita */
+    }
+    100% {
+      right: 100%; /* Termina fora da tela à esquerda */
+    }
+  }
+  
 .menu-item a:hover {
-    background-color: #004494;
+    background-color: rgba(0, 68, 148, 0.9);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
     transform: translateY(-10px);
 }
@@ -82,7 +141,7 @@ nav ul {
     }
 
     .menu-item a {
-        width: 200px; /* Reduzido para telas menores */
+        width: 200px;
         height: 150px;
         font-size: 18px;
     }

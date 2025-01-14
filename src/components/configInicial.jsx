@@ -34,9 +34,9 @@ const VotacaoInicial = () => {
             <option value="" disabled>Seleção do Ano</option>
             <option value="1º Ano">1º Ano</option>
             <option value="2º Ano">2º Ano</option>
-            <option value="3º Ano">2º Ano</option>
-            <option value="4º Ano">2º Ano</option>
-            <option value="5º Ano">2º Ano</option>
+            <option value="3º Ano">3º Ano</option>
+            <option value="4º Ano">4º Ano</option>
+            <option value="5º Ano">5º Ano</option>
 
           </select>
         </div>

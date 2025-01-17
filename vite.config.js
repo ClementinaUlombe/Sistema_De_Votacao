@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['react', 'react-dom'], // Adicione os módulos problemáticos aqui
-    },
-  },
+      external: ['react-router-dom']
+    }
+  }
 });
